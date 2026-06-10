@@ -1,0 +1,47 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" role="img" aria-label="نظام مخالفات مرور نينوى">
+  <defs>
+    <linearGradient id="bg" x1="8%" y1="4%" x2="92%" y2="96%">
+      <stop offset="0%" stop-color="#252525"/>
+      <stop offset="55%" stop-color="#2f2f2f"/>
+      <stop offset="100%" stop-color="#363636"/>
+    </linearGradient>
+    <linearGradient id="docBar" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#3b82f6"/>
+      <stop offset="100%" stop-color="#60a5fa"/>
+    </linearGradient>
+    <linearGradient id="row" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#2563eb"/>
+      <stop offset="100%" stop-color="#60a5fa"/>
+    </linearGradient>
+  </defs>
+
+  <rect width="512" height="512" fill="url(#bg)"/>
+
+  <g transform="translate(56 56) scale(0.78)">
+    <ellipse cx="256" cy="88" rx="200" ry="72" fill="#ffffff" opacity="0.04"/>
+    <path
+      fill="#363636"
+      stroke="#3d3d3d"
+      stroke-width="4"
+      d="M256 88c72 0 132 28 132 64v108c0 78-56 132-132 164-76-32-132-86-132-164V152c0-36 60-64 132-64z"
+    />
+    <rect x="178" y="156" width="156" height="188" rx="18" fill="#2f2f2f" stroke="#3d3d3d" stroke-width="3"/>
+    <rect x="178" y="156" width="156" height="44" rx="18" fill="url(#docBar)"/>
+    <rect x="178" y="188" width="156" height="12" fill="#3b82f6" opacity="0.35"/>
+    <rect x="198" y="212" width="116" height="14" rx="5" fill="url(#row)" opacity="0.5"/>
+    <rect x="198" y="236" width="116" height="14" rx="5" fill="url(#row)" opacity="0.65"/>
+    <rect x="198" y="260" width="116" height="14" rx="5" fill="url(#row)" opacity="0.8"/>
+    <rect x="198" y="284" width="88" height="14" rx="5" fill="#60a5fa"/>
+    <rect x="198" y="312" width="52" height="22" rx="6" fill="#252525" stroke="#3d3d3d" stroke-width="2"/>
+    <rect x="204" y="318" width="40" height="10" rx="3" fill="#f5f5f5" opacity="0.85"/>
+    <circle cx="318" cy="318" r="34" fill="#3b82f6"/>
+    <path
+      fill="none"
+      stroke="#f5f5f5"
+      stroke-width="10"
+      stroke-linecap="round"
+      stroke-linejoin="round"
+      d="M302 318l12 12 26-28"
+    />
+  </g>
+</svg>

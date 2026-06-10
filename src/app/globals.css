@@ -1,0 +1,416 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --background: #f8fafc;
+  --foreground: #0f172a;
+}
+
+/* ── Dark theme: #1D1D1D base + charcoal shade scale ── */
+.dark {
+  color-scheme: dark;
+  --background: #1d1d1d;
+  --foreground: #f5f5f5;
+  --surface: #242424;
+  --surface-2: #222222;
+  --surface-elevated: #2b2b2b;
+  --surface-elevated-2: #333333;
+  --border-dark: #383838;
+  --border-strong: #454545;
+  --hover-dark: #333333;
+  --muted: #b5b5b5;
+  --subtle: #8a8a8a;
+}
+
+/* Cybersecurity navy (superadmin) */
+.cyber {
+  color-scheme: dark;
+  --background: #060b14;
+  --foreground: #e2e8f0;
+  --surface: #0c1526;
+  --surface-2: #0a1220;
+  --surface-elevated: #132238;
+  --surface-elevated-2: #1a2d4a;
+  --border-dark: #1e3a5f;
+  --border-strong: #2563eb;
+  --hover-dark: #1e3a5f;
+  --muted: #94a3b8;
+  --subtle: #64748b;
+  --accent-cyber: #22d3ee;
+}
+
+/* SOC terminal (superadmin) */
+.soc {
+  color-scheme: dark;
+  --background: #020617;
+  --foreground: #bbf7d0;
+  --surface: #04120a;
+  --surface-2: #031008;
+  --surface-elevated: #0a1f12;
+  --surface-elevated-2: #122a18;
+  --border-dark: #14532d;
+  --border-strong: #22c55e;
+  --hover-dark: #14532d;
+  --muted: #86efac;
+  --subtle: #4ade80;
+  --accent-cyber: #4ade80;
+}
+
+html,
+html.font-almarai,
+html[data-font='almarai'] {
+  font-family: var(--font-almarai), 'Segoe UI', Tahoma, Arial, sans-serif;
+}
+
+html.font-tajawal,
+html[data-font='tajawal'] {
+  font-family: var(--font-tajawal), 'Segoe UI', Tahoma, Arial, sans-serif;
+}
+
+html {
+  max-width: 100vw;
+  overflow-x: hidden;
+  -webkit-tap-highlight-color: transparent;
+}
+
+@media (max-width: 767px) {
+  .input,
+  .btn,
+  select.input {
+    min-height: 44px;
+    font-size: 16px;
+  }
+}
+
+.table-scroll {
+  @apply -mx-3 overflow-x-auto px-3 sm:mx-0 sm:px-0;
+}
+
+.table-mobile-cards tbody tr {
+  @apply block border-b border-slate-100 py-2 sm:table-row;
+}
+
+:is(.dark, .cyber, .soc) .table-mobile-cards tbody tr {
+  border-color: var(--border-dark);
+}
+
+body {
+  color: var(--foreground);
+  background: var(--background);
+  font-family: inherit;
+  transition: background-color 0.2s ease, color 0.2s ease, font-family 0.15s ease;
+}
+
+body.font-almarai {
+  font-family: var(--font-almarai), 'Segoe UI', Tahoma, Arial, sans-serif;
+}
+
+body.font-tajawal {
+  font-family: var(--font-tajawal), 'Segoe UI', Tahoma, Arial, sans-serif;
+}
+
+/* ── Global dark remaps (light utility classes → charcoal palette) ── */
+:is(.dark, .cyber, .soc) .text-slate-900,
+:is(.dark, .cyber, .soc) .text-slate-800,
+:is(.dark, .cyber, .soc) .text-slate-700 {
+  color: var(--foreground) !important;
+}
+
+:is(.dark, .cyber, .soc) .text-slate-600 {
+  color: var(--muted) !important;
+}
+
+:is(.dark, .cyber, .soc) .text-slate-500,
+:is(.dark, .cyber, .soc) .text-slate-400,
+:is(.dark, .cyber, .soc) .text-slate-300 {
+  color: var(--subtle) !important;
+}
+
+:is(.dark, .cyber, .soc) .text-slate-200,
+:is(.dark, .cyber, .soc) .text-slate-100,
+:is(.dark, .cyber, .soc) .text-slate-50 {
+  color: var(--foreground) !important;
+}
+
+:is(.dark, .cyber, .soc) .bg-white,
+:is(.dark, .cyber, .soc) .bg-white\/95,
+:is(.dark, .cyber, .soc) .bg-white\/98,
+:is(.dark, .cyber, .soc) .supports-\[backdrop-filter\]\:bg-white\/90 {
+  background-color: var(--surface) !important;
+}
+
+:is(.dark, .cyber, .soc) .bg-slate-50,
+:is(.dark, .cyber, .soc) .bg-slate-100,
+:is(.dark, .cyber, .soc) .bg-slate-200,
+:is(.dark, .cyber, .soc) .bg-slate-700,
+:is(.dark, .cyber, .soc) .bg-slate-800 {
+  background-color: var(--surface-elevated) !important;
+}
+
+:is(.dark, .cyber, .soc) .border-slate-100,
+:is(.dark, .cyber, .soc) .border-slate-200,
+:is(.dark, .cyber, .soc) .border-slate-300,
+:is(.dark, .cyber, .soc) .border-slate-600,
+:is(.dark, .cyber, .soc) .border-slate-700,
+:is(.dark, .cyber, .soc) .border-slate-800,
+:is(.dark, .cyber, .soc) .border-brand-200,
+:is(.dark, .cyber, .soc) .border-brand-300,
+:is(.dark, .cyber, .soc) .border-brand-500 {
+  border-color: var(--border-dark) !important;
+}
+
+:is(.dark, .cyber, .soc) .bg-brand-50,
+:is(.dark, .cyber, .soc) .bg-brand-100 {
+  background-color: var(--surface-elevated) !important;
+}
+
+:is(.dark, .cyber, .soc) .text-brand-800,
+:is(.dark, .cyber, .soc) .text-brand-700 {
+  color: var(--foreground) !important;
+}
+
+:is(.dark, .cyber, .soc) .bg-green-50 {
+  background-color: rgba(16, 185, 129, 0.12) !important;
+}
+
+:is(.dark, .cyber, .soc) .text-green-800 {
+  color: #6ee7b7 !important;
+}
+
+:is(.dark, .cyber, .soc) .bg-green-100 {
+  background-color: rgba(16, 185, 129, 0.18) !important;
+}
+
+:is(.dark, .cyber, .soc) .hover\:bg-slate-50:hover,
+:is(.dark, .cyber, .soc) .hover\:bg-slate-100:hover {
+  background-color: var(--hover-dark) !important;
+}
+
+:is(.dark, .cyber, .soc) .divide-slate-200 > :not([hidden]) ~ :not([hidden]) {
+  border-color: var(--border-dark);
+}
+
+/* PNG export only — applied temporarily during capture, not on screen */
+.force-light-export {
+  background: #ffffff !important;
+  color: #0f172a !important;
+}
+.force-light-export .card {
+  background: #ffffff !important;
+  border-color: #e2e8f0 !important;
+  color: #0f172a !important;
+}
+.force-light-export .text-slate-500 {
+  color: #64748b !important;
+}
+.force-light-export .text-slate-900,
+.force-light-export .text-slate-800,
+.force-light-export .text-slate-700,
+.force-light-export .text-slate-600 {
+  color: #0f172a !important;
+}
+.force-light-export .text-brand-600,
+.force-light-export .text-brand-700,
+.force-light-export .text-brand-400 {
+  color: #2563eb !important;
+}
+.force-light-export .bg-slate-200,
+.force-light-export .bg-slate-100,
+.force-light-export .bg-slate-50 {
+  background: #e2e8f0 !important;
+}
+.force-light-export .border-slate-200,
+.force-light-export .border-slate-100 {
+  border-color: #cbd5e1 !important;
+}
+.force-light-export .bg-brand-500,
+.force-light-export .dark\:bg-brand-400,
+.force-light-export .bg-brand-600 {
+  background: #3b82f6 !important;
+}
+
+.force-light-export .input,
+.force-light-export input,
+.force-light-export select,
+.force-light-export textarea {
+  background-color: #ffffff !important;
+  border-color: #cbd5e1 !important;
+  color: #0f172a !important;
+}
+
+.force-light-export .dark\:bg-dark-surface,
+.force-light-export .dark\:bg-dark-elevated,
+.force-light-export .dark\:bg-dark-bg,
+.force-light-export .dark\:bg-dark-elevated-2,
+.force-light-export .dark\:bg-dark-hover {
+  background-color: #ffffff !important;
+}
+
+.force-light-export .dark\:text-slate-100,
+.force-light-export .dark\:text-slate-200,
+.force-light-export .dark\:text-slate-300,
+.force-light-export .dark\:text-dark-text,
+.force-light-export .dark\:text-dark-muted {
+  color: #0f172a !important;
+}
+
+.force-light-export .dark\:border-dark-border,
+.force-light-export .dark\:border-slate-700,
+.force-light-export .dark\:border-slate-600 {
+  border-color: #e2e8f0 !important;
+}
+
+/* ── Cards ── */
+.card {
+  @apply rounded-2xl border border-slate-200 bg-white p-4 shadow-sm;
+}
+
+:is(.dark, .cyber, .soc) .card {
+  background-color: var(--surface);
+  border-color: var(--border-dark);
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.35);
+}
+
+/* ── Buttons ── */
+.btn {
+  @apply inline-flex items-center justify-center rounded-xl px-4 py-2.5 text-sm font-semibold transition-all duration-150;
+}
+
+.btn-primary {
+  @apply btn bg-brand-600 text-white shadow-sm;
+}
+.btn-primary:hover {
+  @apply bg-brand-700 shadow-md;
+}
+.btn-primary:active {
+  @apply scale-95;
+}
+
+:is(.dark, .cyber, .soc) .btn-primary {
+  @apply bg-brand-500 text-white;
+}
+:is(.dark, .cyber, .soc) .btn-primary:hover {
+  @apply bg-brand-400;
+}
+
+.btn-secondary {
+  @apply btn border border-slate-300 bg-white text-slate-700;
+}
+.btn-secondary:hover {
+  @apply bg-slate-50;
+}
+.btn-secondary:active {
+  @apply scale-95;
+}
+
+:is(.dark, .cyber, .soc) .btn-secondary {
+  border-color: var(--border-dark);
+  background-color: var(--surface-elevated);
+  color: var(--foreground);
+}
+:is(.dark, .cyber, .soc) .btn-secondary:hover {
+  background-color: var(--hover-dark);
+}
+
+.btn-ghost {
+  @apply btn bg-transparent text-slate-600 hover:bg-slate-100;
+}
+
+:is(.dark, .cyber, .soc) .btn-ghost {
+  color: var(--muted);
+}
+:is(.dark, .cyber, .soc) .btn-ghost:hover {
+  background-color: var(--hover-dark);
+}
+
+/* ── Inputs ── */
+.input {
+  @apply w-full rounded-xl border border-slate-300 bg-white px-3 py-2.5 text-sm outline-none ring-brand-500 transition;
+}
+.input:focus {
+  @apply ring-2;
+}
+
+:is(.dark, .cyber, .soc) .input {
+  border-color: var(--border-dark);
+  background-color: var(--surface-elevated);
+  color: var(--foreground);
+}
+:is(.dark, .cyber, .soc) .input:focus {
+  --tw-ring-color: #60a5fa;
+}
+
+:is(.dark, .cyber, .soc) select.input option {
+  background-color: var(--surface-elevated);
+  color: var(--foreground);
+}
+
+/* ── Mic button ── */
+.mic-btn {
+  @apply flex h-24 w-24 items-center justify-center rounded-full bg-brand-600 text-white shadow-lg transition;
+}
+.mic-btn:hover {
+  @apply scale-105 bg-brand-700;
+}
+.mic-btn:active {
+  @apply scale-95;
+}
+:is(.dark, .cyber, .soc) .mic-btn {
+  @apply bg-brand-500 text-white;
+}
+:is(.dark, .cyber, .soc) .mic-btn:hover {
+  @apply bg-brand-400;
+}
+.mic-btn.listening {
+  @apply animate-pulse bg-red-600 text-white;
+}
+.mic-btn.listening:hover {
+  @apply bg-red-700;
+}
+
+/* ── Table highlight ── */
+.highlight-row {
+  @apply bg-amber-50 ring-2 ring-amber-300;
+}
+:is(.dark, .cyber, .soc) .highlight-row {
+  background: rgba(251, 191, 36, 0.12);
+  --tw-ring-color: rgba(251, 191, 36, 0.45);
+}
+
+/* ── Sector toggle card ── */
+.sector-card {
+  @apply relative flex cursor-pointer flex-col gap-1 rounded-2xl border-2 border-slate-200 bg-white p-3 text-sm transition-all duration-150;
+}
+.sector-card:hover {
+  @apply border-slate-400 shadow-md;
+}
+
+:is(.dark, .cyber, .soc) .sector-card {
+  border-color: var(--border-dark);
+  background-color: var(--surface);
+}
+:is(.dark, .cyber, .soc) .sector-card:hover {
+  border-color: var(--border-strong);
+}
+
+.sector-card.selected {
+  @apply border-brand-500 bg-brand-50 shadow-md;
+}
+
+:is(.dark, .cyber, .soc) .sector-card.selected {
+  border-color: #60a5fa;
+  background-color: var(--surface-elevated);
+  box-shadow: 0 0 0 1px rgba(96, 165, 250, 0.25);
+}
+
+/* ── Spinner ── */
+.spinner {
+  @apply inline-block rounded-full border-2 border-current border-t-transparent;
+}
+.spinner-sm {
+  @apply h-3.5 w-3.5;
+}
+.spinner-md {
+  @apply h-4 w-4;
+}
