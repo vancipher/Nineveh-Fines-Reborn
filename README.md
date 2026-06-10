@@ -191,4 +191,6 @@ See `.env.example`:
 
 ## License
 
-Internal use — Nineveh Traffic Directorate fines workflow.
+**Van Cipher Restricted License v1.0** — see [LICENSE](LICENSE).
+
+Built for Nineveh traffic fines workflow — **all rights reserved**. You may read this repo on GitHub for learning. **Any deployment, government use, or redistribution requires written permission** from [Abdullah Y. Habash (@vancipher)](https://github.com/vancipher).

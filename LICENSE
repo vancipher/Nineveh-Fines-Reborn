@@ -1,0 +1,29 @@
+Van Cipher Restricted License v1.0
+
+Copyright (c) 2024-2026 Abdullah Y. Habash ("Van De Cipher", @vancipher)
+All rights reserved.
+
+This repository and all associated source code, documentation, and assets are
+proprietary to the copyright holder.
+
+PERMITTED WITHOUT PRIOR APPROVAL:
+  - Reading and studying the public source on GitHub for personal learning
+  - Opening issues or pull requests that discuss bugs or documentation
+
+NOT PERMITTED WITHOUT EXPLICIT WRITTEN PERMISSION FROM THE COPYRIGHT HOLDER:
+  - Using, running, or deploying this software in any organization or workflow
+  - Copying, modifying, or creating derivative works for any purpose
+  - Redistributing, sublicensing, selling, or republishing any part of this project
+  - Deploying for traffic directorates, government agencies, or commercial SaaS
+  - Incorporating this code into other products or services
+
+This system was built for a specific government fines workflow. Unauthorized
+deployment may affect regulated public-sector processes.
+
+PERMISSION REQUESTS
+  Contact Abdullah Y. Habash before any use beyond reading the public repo:
+    GitHub:  https://github.com/vancipher
+    Web:     https://cyberxsec.me
+
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND. IN NO EVENT
+SHALL THE AUTHORS BE LIABLE FOR ANY CLAIM, DAMAGES, OR OTHER LIABILITY.
